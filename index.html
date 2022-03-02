@@ -20,6 +20,7 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link href="dist/simple-lightbox.min.css" rel="stylesheet" />
 
 </head>
 
@@ -29,15 +30,33 @@
     On the 24th of February, an event which we, Ukrainians, thought impossible, happened: Russian Federation invaded peaceful Ukraine.<br/>
     For your attention, below some pictures of Ukrainian cities before and after shelling by Russian Federation military forces.
   </div>
+  <div class="gallery">
+    <img src="images/chernihiv-before-and-after.jpeg"/>
+    <img src="images/ivankiv-before-and-after.jpeg"/>
+    <img src="images/kharkiv-before-and-after.jpeg"/>
+    <img src="images/kyiv-before-and-after.jpeg"/>
+    <img src="images/kyiv-before-and-after2.jpeg"/>
+    <img src="images/mykolaiv-before-and-after.jpeg"/>
   <div>
-    <img src="chernihiv-before-and-after.jpeg"/>
-    <img src="ivankiv-before-and-after.jpeg"/>
-    <img src="ivankiv-before-and-after.jpeg"/>
-    <img src="kharkiv-before-and-after.jpeg"/>
-    <img src="kyiv-before-and-after.jpeg"/>
-    <img src="kyiv-before-and-after2.jpeg"/>
-    <img src="mykolaiv-before-and-after.jpeg"/>
-  <div>
+  <!-- As A Vanilla JavaScript Plugin -->
+  <!--script src="dist/simple-lightbox.min.js"></script--!>
+  <!-- For legacy browsers -->
+  <script src="dist/simple-lightbox.legacy.min.js"></script>
+  <!-- As A jQuery Plugin -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
+  <script src="dist/simple-lightbox.jquery.min.js"></script>
   <script src="js/scripts.js"></script>
+  <script>
+  // As A Vanilla JavaScript Plugin
+  /*var gallery = new SimpleLightbox('.gallery a', { 
+  
+  });*/
+
+  // As A jQuery Plugin -->
+  var gallery = $('.gallery a').simpleLightbox({
+      /* options */
+  });
+
+  </script>
 </body>
 </html>
